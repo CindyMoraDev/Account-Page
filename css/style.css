@@ -1,0 +1,547 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+html {
+    /*comportamiento suave del scroll*/
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+:root {
+    --rosado: #f41976;
+    --azul: #215684;
+    --negro: #100f0f;
+    --blanco: #ffffff;
+    --gris: #eeeeee;
+    --font: 'Montserrat', sans-serif !important;
+    --titlefont: 'Rubik', sans-serif !important;
+}
+
+.titulo-section {
+    color: var(--azul);
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    font-family: var(--titlefont);
+    font-weight: 600 !important;
+    font-size: 2.1rem;
+}
+
+.titulo-section:after {
+    content: "";
+    display: block;
+    width: 6em;
+    max-width: 70%;
+    border-bottom: 0.05em solid var(--rosado);
+    border-radius: 1px;
+}
+
+.caja-oferta,
+.caja-objetivos {
+    box-shadow: 0 2px 60px 0 rgb(0 0 0 / 10%);
+    border-radius: 10px;
+}
+
+.btn-block {
+    background-color: var(--rosado);
+    color: var(--gris);
+    font-weight: 600;
+}
+
+.btn-block:hover {
+    border: var(--rosado) 1px solid;
+    color: var(--rosado);
+    background-color: var(--gris);
+    font-weight: 600;
+}
+
+.text-weight {
+    font-weight: 600;
+}
+
+
+/* ============================================================================================================
+   NAVBAR
+============================================================================================================= */
+
+.navbar {
+    border-bottom: 1px solid var(--gris);
+    background-color: var(--azul);
+    color: var(--gris);
+}
+
+.logo-nav {
+    width: 10%;
+}
+
+.logo-nav img {
+    width: 100%;
+    height: 100%;
+}
+
+.navbar .nav-link {
+    font-size: 0.85rem;
+    color: var(--gris);
+}
+
+.navbar .nav-link:hover {
+    font-weight: 600;
+}
+
+
+/* ============================================================================================================
+   HEADER
+============================================================================================================= */
+
+#header h1 {
+    font-family: var(--titlefont);
+    font-size: 3rem;
+    color: var(--gris);
+    letter-spacing: 2px;
+    word-spacing: 10px;
+}
+
+#header p {
+    font-size: 1.2rem;
+    color: var(--gris);
+}
+
+
+/*
+.header-background-inicio {
+    background-image: url("../proyecto/img/inicio.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 100%;
+}
+*/
+
+.header-background-contenedor {
+    font-size: 2.3rem;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 1000px rgba(33, 86, 132, 0.4);
+}
+
+
+/* ============================================================================================================
+OFERTA DE VALOR
+============================================================================================================= */
+
+.sec-titulo .oferta-txt {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--negro);
+}
+
+.oferta-titulo {
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.icon {
+    color: var(--azul);
+}
+
+.icon-circulo {
+    position: relative;
+}
+
+.icon-circulo::before {
+    z-index: 1;
+    position: relative;
+}
+
+.icon-circulo::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -10px;
+    left: 15px;
+    border-radius: 50%;
+    background: inherit;
+    opacity: .4;
+    background: rgba(244, 25, 118, 0.3);
+}
+
+
+/* ============================================================================================================
+SERVICES
+============================================================================================================= */
+
+.servicios-flex {
+    display: flex;
+}
+
+.servicios-flex-contenido {
+    order: 1;
+}
+
+.servicios-flex-imagen {
+    order: 2;
+}
+
+.card-img-top {
+    border-radius: 10px;
+}
+
+.servicios {
+    background-color: var(--gris);
+}
+
+.sec-titulo .servicios-txt {
+    font-size: 1.2rem;
+}
+
+.servicios img {
+    filter: sepia(100%) hue-rotate(180deg) saturate(175%);
+}
+
+.servicios-titulo {
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.servicios-titulo:after {
+    content: "";
+    display: block;
+    width: 6em;
+    max-width: 70%;
+    border-bottom: 0.05em solid var(--rosado);
+    border-radius: 1px;
+}
+
+
+/* ============================================================================================================
+CLIENTES TARGET
+============================================================================================================= */
+
+.target {
+    background-color: var(--gris);
+    border-radius: 10px;
+}
+
+.target-img {
+    width: 70%;
+    margin-left: 5rem;
+}
+
+.target-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.target-titulo {
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+
+/* ============================================================================================================
+CLIENTES
+============================================================================================================= */
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 50px;
+    height: 50px;
+    filter: invert(32%) sepia(98%) saturate(6709%) hue-rotate(324deg) brightness(99%) contrast(93%);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%
+}
+
+
+/* ============================================================================================================
+TESTIMONIOS
+============================================================================================================= */
+
+.fa-quote-left {
+    color: var(--rosado);
+}
+
+.testimonio-persona .testimonio-img {
+    border: 5px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 2px 2px var(--rosado);
+    overflow: hidden;
+    width: 20%;
+}
+
+.testimonio-persona .testimonio-img img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ============================================================================================================
+CALL TO ACTION
+============================================================================================================= */
+
+.contenedor-call {
+    background-color: var(--azul);
+}
+
+.titulo-call {
+    color: var(--gris);
+}
+
+.img-call {
+    width: 100%;
+}
+
+.img-call img {
+    width: 100%;
+    height: 100%;
+}
+
+.form-call label,
+.oferta-txt {
+    color: var(--gris);
+}
+
+
+/* ============================================================================================================
+NOSOTROS
+============================================================================================================= */
+
+.img-nosotros {
+    width: 100%;
+}
+
+.img-nosotros img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.nosotros-historia {
+    background-color: var(--gris);
+}
+
+
+/* ============================================================================================================
+CONTACTENOS
+============================================================================================================= */
+
+.header-background-contacto {
+    background-image: url("/img/contacto.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.datos-titulo {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.contactenos-iconos {
+    color: var(--rosado);
+}
+
+.datos-contacto {
+    padding-left: 5%;
+    background-color: var(--gris);
+    border-radius: 10px;
+}
+
+
+/* ============================================================================================================
+CONSULTAS
+============================================================================================================= */
+
+.header-background-consultas {
+    background-image: url("/img/consultas.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.link-consultas {
+    background-color: var(--azul);
+    color: var(--gris);
+}
+
+.link-consultas:hover {
+    background-color: var(--gris);
+    color: var(--azul);
+    border: var(--azul) solid 1px;
+}
+
+.consultas-flecha {
+    color: var(--rosado);
+}
+
+
+/* ============================================================================================================
+SERVICIOS
+============================================================================================================= */
+
+.header-background-servicios {
+    background-image: url("/img/servicios.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 100%;
+}
+
+.servicios-page-titulo {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--azul);
+}
+
+
+/* ============================================================================================================
+PROMOCIONES
+============================================================================================================= */
+
+.contenedor-promo {
+    background-color: var(--gris);
+}
+
+.txt-call {
+    color: var(--negro);
+}
+
+
+/* ============================================================================================================
+FOOTER
+============================================================================================================= */
+
+.pie {
+    background-color: var(--azul);
+}
+
+.logo-footer {
+    width: 70%;
+    background-color: var(--gris);
+    border-radius: 5px;
+}
+
+.logo-footer img {
+    width: 100%;
+    height: 100%;
+}
+
+.lista-links {
+    list-style-type: none;
+}
+
+.lista-links li {
+    font-size: 1.2rem !important;
+}
+
+.lista-links li a {
+    text-decoration: none;
+    color: var(--gris);
+}
+
+.lista-links li a:hover {
+    font-weight: 700;
+    background-color: rgba(45, 45, 45, 0.1)
+}
+
+.lista-links li p {
+    text-decoration: none;
+    color: var(--gris);
+    font-size: 1rem !important;
+}
+
+.lista-links .redes-sociales a .fab {
+    color: var(--gris);
+    padding-top: 10px;
+    font-size: 2rem !important;
+}
+
+.lista-links .redes-sociales a .fab:hover {
+    color: var(--rosado);
+}
+
+.derechos p {
+    margin: 0;
+    color: var(--gris);
+    font-size: 0.8rem;
+}
+
+
+/*posiciona el boton scrolltop a la derecha y le brinda posicion fija = fixed*/
+
+.goto-top {
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+}
+
+.goto-top .fa-square-caret-up {
+    color: var(--negro);
+}
+
+.goto-top .fa-square-caret-up:hover {
+    color: var(--rosado);
+}
+
+
+/* ============================================================================================================
+MEDIAQUERY
+============================================================================================================= */
+
+@media (min-width: 576px) {
+    .logo-nav {
+        width: 15%;
+    }
+    .logo-footer {
+        width: 35%;
+    }
+    #header {
+        height: 40vh;
+    }
+    .servicios-flex-contenido {
+        order: 2;
+    }
+    .servicios-flex-imagen {
+        order: 1;
+    }
+    .datos-contacto {
+        padding-left: 0%;
+    }
+}
+
+@media (min-width: 768px) {
+    #header {
+        height: 40vh;
+    }
+    .logo-footer {
+        width: 80%;
+    }
+    .logo-footer {
+        width: 70%;
+    }
+    .servicios-flex-contenido {
+        order: 1;
+    }
+    .servicios-flex-imagen {
+        order: 2;
+    }
+}
+
+@media (min-width: 992px) {
+    .logo-nav {
+        width: 10%;
+    }
+    #header {
+        height: 50vh;
+    }
+    .testimonio-persona .testimonio-img {
+        width: 50%;
+    }
+    .datos-contacto {
+        padding-left: 5%;
+    }
+}
+
+@media (min-width: 1200px) {}
+
+@media (min-width: 1600px) {}
