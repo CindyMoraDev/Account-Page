@@ -26,8 +26,8 @@
     <nav class="container-fluid navbar navbar-dark sticky-top navbar-expand-lg ">
         <div class="container">
 
-            <a href="index.html" class="logo-nav pr-3">
-                <img class="img-logo" src="img/logonav.jpg" height="100" alt="Logo">
+            <a href="index.html" class="logo-nav ">
+                <img class="img-fluid img-logo" src="img/logonav.jpg" alt="Logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -50,11 +50,11 @@
         <!-- ====================================
    HEADER
 ===================================== -->
-        <header id="header" class="container-fluid  header-background-contacto" style="background-image: url('img/contacto.jpg');">
+        <header id="header" class="container-fluid d-flex  flex-wrap align-content-center justify-content-end header-background-contacto" style="background-image: url('img/contacto.jpg');">
             <div class="container ">
                 <div class="row ">
-                    <div class="col-sm-12 offset-md-4 col-md-8 offset-lg-6 col-lg-6 d-flex justify-content-end flex-wrap align-content-center header-background-contenedor ">
-                        <p class=" text-white text-center m-5 p-sm-2 p-md-1 p-lg-4 p-xl-5">
+                    <div class="col-sm-12 offset-md-4 col-md-8 offset-lg-6 col-lg-6 mt-5 d-flex justify-content-center flex-wrap align-content-center mb-2 p-lg-2 p-xl-3 header-background-contenedor ">
+                        <p class=" text-white text-center fs-sm-3 fs-4">
                             Ofrecemos distintas maneras de ponerse en contacto con nosotros.</p>
 
                     </div>
@@ -78,24 +78,23 @@
 
                             <div class="form-group my-3">
 
-
                                 <div class="mb-3">
                                     <label class="form-label datos-titulo">Nombre</label><br>
-                                    <input type="text" name="c1" class="form-control" id="nombreTXT" size="10" onkeyup="minusculas(this);">
+                                    <input type="text" name="c1" class="form-control" id="nombreTXT" size="10">
                                 </div>
 
                                 <div class="mb-3">
                                     <label class="form-label datos-titulo">Correo electrónico</label><br>
-                                    <input type="email" name="c3" class="form-control" id="correoTXT" minlength="10" onkeyup="minusculas(this);">
+                                    <input type="email" name="c2" class="form-control" id="correoTXT" minlength="10">
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label datos-titulo">Mensaje</label><br>
-                                    <textarea class="form-control" name="c4" rows="2" cols="50" id="areaTXT" onkeyup="minusculas(this);"></textarea>
+                                    <textarea class="form-control" name="c3" rows="2" cols="50" id="areaTXT"></textarea>
                                     <div class="">Escriba sus comentarios o consultas.</div>
                                 </div>
 
 
-                                <input type="button" value="Enviar" type="submit" class="btn btn-block  " data-aos="zoom-in" onclick="validar_datos()">
+                                <input type="button" value="Enviar" type="submit" class="btn btn-block" data-aos="zoom-in" data-aos-offset="0" onclick="completo()">
 
 
                             </div>
@@ -118,9 +117,6 @@
             </div>
         </section>
 
-
-
-
     </main>
 
 
@@ -132,17 +128,20 @@
 
         <div class="container ">
             <div class="row ">
-                <div class="col-lg-4 col-md-4 col-sm-12 d-flex justify-content-between justify-content-sm-center align-items-center p-1 ">
+                <div class="col-lg-4 col-md-4 col-sm-12 d-flex justify-content-center justify-content-lg-start justify-content-md-start ">
                     <a class="logo-footer ">
-                        <img class="img-logo " src="img/logofooter.jpg" height="100 " alt="Logo ">
+                        <img class="img-logo " src="img/logofooter.jpg " height="100 " alt="Logo ">
                     </a>
 
                 </div>
 
+
+
                 <div class="offset-lg-3 col-lg-5 offset-md-1 col-md-7 offset-sm-0 col-sm-12 d-flex justify-content-end justify-content-sm-between align-items-center p-1 ">
                     <ul class="lista-links mb-0 ">
                         <li>
-                            <p class="fs-3 "><i class="fas fa-envelope me-3 "></i>mymasesorescontables@hotmail.com</p>
+                            <p class="fs-3 d-flex "><i class="fas fa-envelope me-3 "></i><span class="break-word ">mymasesorescontables@hotmail.com</span>
+                            </p>
                         </li>
                         <li>
                             <p class="fs-3 "><i class="fas fa-phone me-3 "></i>(506) 8317-6057</p>
@@ -157,8 +156,9 @@
                         </div>
                     </ul>
                 </div>
+
                 <div class="col-12 d-flex justify-content-center derechos ">
-                    <p> Derechos reservados &copy; 2022 MyM Asesores Contables</p>
+                    <p> Derechos reservados &copy; 2023 MyM Asesores Contables</p>
                 </div>
             </div>
         </div>

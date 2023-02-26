@@ -1,3 +1,5 @@
+//var flecha = document.getElementById("flechabtn");
+
 //elasticidad boton scrolltop
 $(document).ready(function() {
     smoothScroll.init({

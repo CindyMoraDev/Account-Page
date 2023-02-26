@@ -26,8 +26,8 @@
     <nav class="container-fluid navbar navbar-dark sticky-top navbar-expand-lg ">
         <div class="container">
 
-            <a href="index.html" class="logo-nav pr-3">
-                <img class="img-logo" src="img/logonav.jpg" height="100" alt="Logo">
+            <a href="index.html" class="logo-nav ">
+                <img class="img-fluid img-logo" src="img/logonav.jpg" alt="Logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -89,20 +89,21 @@
                         <div class="col-sm-12 col-md-7 d-flex flex-wrap align-content-center justify-content-center ">
                             <h2 class="pt-4 text-center titulo-call txt-call"> Brindamos capacitaciones</h2>
                             <p class="text-center oferta-txt txt-call">Contactenos para dialogar más acerca de las capacitaciones.</p>
-                            <form class="form-call col-sm-10">
-                                <div class="mb-2 txt-call">
-                                    <label for="exampleInputName" class="form-label"> <span class="txt-call">Nombre</span> </label>
-                                    <input type="text" class="form-control form-control-sm" id="exampleInputName">
-                                </div>
-                                <div class="mb-2 txt-call">
-                                    <label for="exampleInputEmail1" class="form-label"> <span class="txt-call">Correo</span></label>
-                                    <input type="email" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                </div>
+                            <form class="form-call w-100" name="login" method="post">
 
-                                <button type="submit" class="btn  btn-md btn-block my-4" data-aos="zoom-in" onclick="completo()">Enviar</button>
+                                <div class="form-group my-3">
+                                    <div class="mb-2 txt-call">
+                                        <label for="exampleInputName" class="form-label"> <span class="txt-call">Nombre</span> </label>
+                                        <input type="text" name="c1" class="form-control" id="nombreTXT">
+                                    </div>
+                                    <div class="mb-2 txt-call">
+                                        <label for="exampleInputEmail1" class="form-label"> <span class="txt-call">Correo</span></label>
+                                        <input type="email" name="c2" class="form-control" id="correoTXT" aria-describedby="emailHelp">
+                                    </div>
+
+                                    <input type="button" value="Enviar" type="submit" class="btn btn-block my-4" data-aos="zoom-in" data-aos-offset="0" onclick="completoCorto()">
+                                </div>
                             </form>
-
-
                         </div>
                         <div class="col-sm-12 col-md-5 d-flex align-items-md-end" data-aos="fade-left" data-aos-duration="2000">
                             <div class="img-call ">
@@ -127,9 +128,9 @@
 
         <div class="container ">
             <div class="row ">
-                <div class="col-lg-4 col-md-4 col-sm-12 d-flex justify-content-between justify-content-sm-center align-items-center p-1 ">
+                <div class="col-lg-4 col-md-4 col-sm-12 d-flex justify-content-center justify-content-lg-start justify-content-md-start ">
                     <a class="logo-footer ">
-                        <img class="img-logo " src="img/logofooter.jpg" height="100 " alt="Logo ">
+                        <img class="img-logo " src="img/logofooter.jpg " height="100 " alt="Logo ">
                     </a>
 
                 </div>
@@ -137,7 +138,8 @@
                 <div class="offset-lg-3 col-lg-5 offset-md-1 col-md-7 offset-sm-0 col-sm-12 d-flex justify-content-end justify-content-sm-between align-items-center p-1 ">
                     <ul class="lista-links mb-0 ">
                         <li>
-                            <p class="fs-3 "><i class="fas fa-envelope me-3 "></i>mymasesorescontables@hotmail.com</p>
+                            <p class="fs-3 d-flex "><i class="fas fa-envelope me-3 "></i><span class="break-word ">mymasesorescontables@hotmail.com</span>
+                            </p>
                         </li>
                         <li>
                             <p class="fs-3 "><i class="fas fa-phone me-3 "></i>(506) 8317-6057</p>
@@ -152,14 +154,14 @@
                         </div>
                     </ul>
                 </div>
+
                 <div class="col-12 d-flex justify-content-center derechos ">
-                    <p> Derechos reservados &copy; 2022 MyM Asesores Contables</p>
+                    <p> Derechos reservados &copy; 2023 MyM Asesores Contables</p>
                 </div>
             </div>
         </div>
 
     </footer>
-
 
     <a id="flechabtn " href="#" class="goto-top " title="Ir al inicio " onclick="topFunction() " data-scroll>
         <i class="fa-solid fa-square-caret-up fa-4x "></i>

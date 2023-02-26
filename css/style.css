@@ -35,7 +35,6 @@ html {
     width: 6em;
     max-width: 70%;
     border-bottom: 0.05em solid var(--rosado);
-    border-radius: 1px;
 }
 
 .caja-oferta,
@@ -73,12 +72,7 @@ html {
 }
 
 .logo-nav {
-    width: 10%;
-}
-
-.logo-nav img {
-    width: 100%;
-    height: 100%;
+    width: 40%;
 }
 
 .navbar .nav-link {
@@ -108,15 +102,11 @@ html {
     color: var(--gris);
 }
 
-
-/*
 .header-background-inicio {
-    background-image: url("../proyecto/img/inicio.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: 100%;
 }
-*/
 
 .header-background-contenedor {
     font-size: 2.3rem;
@@ -175,14 +165,6 @@ SERVICES
     display: flex;
 }
 
-.servicios-flex-contenido {
-    order: 1;
-}
-
-.servicios-flex-imagen {
-    order: 2;
-}
-
 .card-img-top {
     border-radius: 10px;
 }
@@ -195,7 +177,8 @@ SERVICES
     font-size: 1.2rem;
 }
 
-.servicios img {
+.servicios img,
+.clientes-target img {
     filter: sepia(100%) hue-rotate(180deg) saturate(175%);
 }
 
@@ -209,8 +192,7 @@ SERVICES
     display: block;
     width: 6em;
     max-width: 70%;
-    border-bottom: 0.05em solid var(--rosado);
-    border-radius: 1px;
+    border-bottom: 0.07em solid var(--rosado);
 }
 
 
@@ -224,8 +206,7 @@ CLIENTES TARGET
 }
 
 .target-img {
-    width: 70%;
-    margin-left: 5rem;
+    width: 90%;
 }
 
 .target-img img {
@@ -323,6 +304,10 @@ NOSOTROS
     background-color: var(--gris);
 }
 
+.nosotros-compromiso .container {
+    background-color: var(--blanco);
+}
+
 
 /* ============================================================================================================
 CONTACTENOS
@@ -384,7 +369,7 @@ SERVICIOS
     background-image: url("/img/servicios.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: 100%;
+    background-position-x: 35%;
 }
 
 .servicios-page-titulo {
@@ -403,7 +388,7 @@ PROMOCIONES
 }
 
 .txt-call {
-    color: var(--negro);
+    color: var(--azul);
 }
 
 
@@ -417,13 +402,18 @@ FOOTER
 
 .logo-footer {
     width: 70%;
-    background-color: var(--gris);
+    background-color: var(--azul);
     border-radius: 5px;
 }
 
-.logo-footer img {
+.logo-footer .img-logo {
     width: 100%;
-    height: 100%;
+    display: block;
+    height: auto;
+}
+
+.break-word {
+    word-wrap: break-word;
 }
 
 .lista-links {
@@ -476,17 +466,64 @@ FOOTER
 }
 
 .goto-top .fa-square-caret-up {
-    color: var(--negro);
+    color: var(--rosado);
 }
 
 .goto-top .fa-square-caret-up:hover {
-    color: var(--rosado);
+    color: var(--negro);
 }
 
 
 /* ============================================================================================================
 MEDIAQUERY
 ============================================================================================================= */
+
+@media (min-width: 270px) {
+    .header-background-inicio {
+        background-position: 50% 50%;
+    }
+    .testimonio-persona .testimonio-img {
+        width: 40%;
+    }
+    .lista-links li p {
+        font-size: 0.7rem !important;
+    }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 30px;
+        height: 30px;
+    }
+    .carousel-item {
+        width: 170%;
+    }
+    .nosotros-historia-contenedor,
+    .nosotros-objetivos,
+    .nosotros-compromiso,
+    .consultas {
+        padding-top: 25px;
+    }
+    .consultas-flecha {
+        display: none;
+    }
+}
+
+@media (min-width: 300px) {
+    .testimonio-persona .testimonio-img {
+        width: 25%;
+    }
+    .lista-links li p {
+        font-size: 1rem !important;
+    }
+    .carousel-item {
+        width: 165%;
+    }
+    .calendario-container {
+        padding-bottom: 25px;
+    }
+    .consultas-flecha {
+        display: block;
+    }
+}
 
 @media (min-width: 576px) {
     .logo-nav {
@@ -498,14 +535,11 @@ MEDIAQUERY
     #header {
         height: 40vh;
     }
-    .servicios-flex-contenido {
-        order: 2;
-    }
-    .servicios-flex-imagen {
-        order: 1;
-    }
     .datos-contacto {
         padding-left: 0%;
+    }
+    .carousel-item {
+        width: 100%;
     }
 }
 
@@ -514,22 +548,24 @@ MEDIAQUERY
         height: 40vh;
     }
     .logo-footer {
-        width: 80%;
+        width: 100%;
     }
-    .logo-footer {
-        width: 70%;
+    .nosotros-objetivos,
+    .nosotros-compromiso,
+    .consultas {
+        padding-top: 0;
     }
-    .servicios-flex-contenido {
-        order: 1;
-    }
-    .servicios-flex-imagen {
-        order: 2;
+    .calendario-container {
+        padding-bottom: 0;
     }
 }
 
 @media (min-width: 992px) {
     .logo-nav {
         width: 10%;
+    }
+    .logo-footer {
+        width: 80%;
     }
     #header {
         height: 50vh;
@@ -542,6 +578,14 @@ MEDIAQUERY
     }
 }
 
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+    .nosotros-compromiso {
+        padding: -25px;
+    }
+}
 
-@media (min-width: 1600px) {}
+@media (min-width: 1600px) {
+    .nosotros-historia-contenedor {
+        padding-top: 0;
+    }
+}
